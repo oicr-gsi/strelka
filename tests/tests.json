@@ -16,10 +16,10 @@
       "id": "PCSI_0773_EX",
       "parameters": {
         "wdl_inputs": {
-          "strelka.tumorBam": "/.mounts/labs/gsi/testdata/strelka/input_data/SWID_11767083_PCSI_0773_Pa_P_PE_315_EX_526_180309_D00355_0217_ACC9MHANXX_ATGCCTAA_L006_001.annotated.bam",
-          "strelka.tumorBai": "/.mounts/labs/gsi/testdata/strelka/input_data/SWID_11767083_PCSI_0773_Pa_P_PE_315_EX_526_180309_D00355_0217_ACC9MHANXX_ATGCCTAA_L006_001.annotated.bam.bai",
-          "strelka.normalBam": "/.mounts/labs/gsi/testdata/strelka/input_data/SWID_11767081_PCSI_0773_Ly_R_PE_366_EX_180309_D00355_0217_ACC9MHANXX_GAATCTGA_L006_001.annotated.bam",
-          "strelka.normalBai": "/.mounts/labs/gsi/testdata/strelka/input_data/SWID_11767081_PCSI_0773_Ly_R_PE_366_EX_180309_D00355_0217_ACC9MHANXX_GAATCTGA_L006_001.annotated.bam.bai",
+          "strelka.tumorBam": "/.mounts/labs/gsi/testdata/strelka/input_data/PCSI_0773_Pa_P_PE_315_EX.bam",
+          "strelka.tumorBai": "/.mounts/labs/gsi/testdata/strelka/input_data/PCSI_0773_Pa_P_PE_315_EX.bam.bai",
+          "strelka.normalBam": "/.mounts/labs/gsi/testdata/strelka/input_data/PCSI_0773_Ly_R_PE_366_EX.bam",
+          "strelka.normalBai": "/.mounts/labs/gsi/testdata/strelka/input_data/PCSI_0773_Ly_R_PE_366_EX.bam.bai",
           "strelka.doBamSort": true,
           "strelka.outputFileNamePrefix": "PCSI_0773_Ly_R_PE_366_EX",
           "strelka.isSkipDepthFilters": 1,
