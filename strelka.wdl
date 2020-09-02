@@ -187,10 +187,8 @@ task generateConfig {
 
   binSize = ~{binSize}"
 
-  if [ -z "~{extraStrelkaArguments}" ]; then
-    configText+="; Additional arguments passed to strelka.
-
-     extraStrelkaArguments = ~{extraStrelkaArguments}"
+  if [ ! -z "~{extraStrelkaArguments}" ]; then
+    configText+="extraStrelkaArguments = ~{extraStrelkaArguments}"
   fi
 
   echo "$configText" >> config.ini
