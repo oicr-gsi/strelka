@@ -1,2 +1,4 @@
 *.iml
 .idea/
+v.out
+vidarrtest-regression.json
