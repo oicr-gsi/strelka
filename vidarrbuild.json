@@ -1,0 +1,6 @@
+{
+    "names": [
+        "strelka"
+    ],
+    "wdl": "strelka.wdl"
+}
