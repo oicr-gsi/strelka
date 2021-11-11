@@ -96,7 +96,10 @@
             "strelka.updateVcfHeader.timeout": null
         },
         "description": "Workflow test for strelka",
-        "engineArguments": {},
+        "engineArguments": {
+           "read_from_cache": false,
+           "write_to_cache": false
+        },
         "id": "PCSI_0773_EX",
         "metadata": {
             "strelka.indel": {
@@ -238,7 +241,10 @@
             "strelka.updateVcfHeader.timeout": null
         },
         "description": "Workflow test for strelka",
-        "engineArguments": {},
+        "engineArguments": {
+           "read_from_cache": false,
+           "write_to_cache": false
+        },
         "id": "DCIS_0001_TS",
         "metadata": {
             "strelka.indel": {

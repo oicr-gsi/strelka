@@ -5,4 +5,5 @@ set -o pipefail
 
 cd $1
 
-find *vcf* -xtype f -size +0 | sed 's/.*\.//' | sort | uniq -c
+echo ".vcf files:"
+for f in *vcf.gz;do echo $f;zcat $f | cut -f 1-6 | md5sum;done
