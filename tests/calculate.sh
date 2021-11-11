@@ -5,4 +5,5 @@ set -o pipefail
 
 cd $1
 
-find *vcf* -xtype f -size +0 | sed 's/.*\.//' | sort | uniq -c
+echo ".vcf files"
+find *vcf* -xtype f -size +0 | xargs md5sum | sort -V
