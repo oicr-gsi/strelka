@@ -6,4 +6,4 @@ set -o pipefail
 cd $1
 
 echo ".vcf files:"
-find *vcf* -xtype f -size +0 | grep -v tbi | xargs md5sum | sort -V
+for f in *vcf.gz;do echo $f;zcat $f | cut -f 1-6 | md5sum;done
