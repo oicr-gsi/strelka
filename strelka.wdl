@@ -14,7 +14,10 @@ workflow strelka {
 
   parameter_meta {
     tumorBam: "Tumor bam file"
+    tumorBai: "index of Tumor bam file"
     normalBam: "Matched normal bam file"
+    normalBai: "index of Matched normal bam file"
+    outputFileNamePrefix: "File output prefix"
     isSkipDepthFilters: "Used to generated config.ini. Value of 1 to skip depth filtration for whole exome or other targeted sequencing data"
     maxInputDepth: "Used to generated config.ini. Strelka will not accept input reads above this depth."
     doBamSort: "Flag to indicate whether bam should be sorted. Default for Strelka: true."
@@ -84,6 +87,24 @@ workflow strelka {
         url: "http://www.htslib.org/"
       }
     ]
+    output_meta: {
+      snv: {
+        description: "SNV calls in vcf format",
+        vidarr_label: "snv"
+      },
+     snvIndex: {
+        description: "Index file for SNV calls in vcf format",
+        vidarr_label: "snvIndex"
+     },
+     indel: {
+        description: "Indel calls in vcf format",
+        vidarr_label: "indel" 
+     },
+     indelIndex: {
+        description: "Index file for Indel calls in vcf format",
+        vidarr_label: "indelIndex"
+     }
+    }
   }
 }
 
@@ -206,8 +227,11 @@ task generateConfig {
 
   meta {
     output_meta: {
-      configIni: "config.ini file to be used in Strelka call."
+    configIni: {
+        description: "config.ini file to be used in Strelka call.",
+        vidarr_label: "configIni"
     }
+}
   }
 }
 
@@ -228,10 +252,12 @@ task sortBams {
     modules: "Names and versions of modules to load."
     tumorBam: "Tumor bam file to be sorted."
     normalBam: "Normal bam file to be sorted."
+    picard: "Path to picard jar"
     picardMaxMemMb: "Max amount of memory to be used by Picard ReorderSam"
     refDict: "Reference sequence dictionary file."
     memory: "Memory allocated for this job."
     timeout: "Hours before task timeout."
+    threads: "Threads used by this task"
   }
 
   String tumorBamBasename = basename(tumorBam, '.bam')
@@ -300,8 +326,12 @@ task runStrelka {
   parameter_meta {
     modules: "Names and versions of modules to load."
     tumorBam: "Sorted or unsorted tumor bam file."
+    tumorBai: "Index of Sorted or unsorted tumor bam file."
     normalBam: "Sorted or unsorted normal bam file."
+    normalBai: "Index of Sorted or unsorted normal bam file."
     configIni: "Config file with all Streka configuration parameters."
+    outputFileNamePrefix: "Output file prefix"
+    strelkaTag: "Tag used by strelka for its outputs"
     refFasta: "Reference FASTA file."
     memory: "Memory allocated for this job."
     threads: "Requested CPU threads"
@@ -368,10 +398,15 @@ task updateVcfHeader {
 
   parameter_meta {
     modules: "Names and versions of modules to load."
-    snv: ""
-    indel: ""
+    snv: "Structural variants"
+    indel: "Indels"
+    header: "Additional text for header"
+    caller: "strelka"
+    strelkaVersion: "Version of strekla running the analysis"
+    reference: "Reference id, such as hg19"
     memory: "Memory allocated for this job."
     timeout: "Hours before task timeout."
+    threads: "Threads used by this task"
   }
 
   command <<<
