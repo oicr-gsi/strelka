@@ -27,7 +27,7 @@
             "strelka.maxInputDepth": 10000,
             "strelka.normalBai": {
                 "contents": {
-                    "configuration": "/.mounts/labs/gsi/testdata/strelka/input_data/PCSI_0773_Ly_R_PE_366_EX.bam.bai",
+                    "configuration": "/.mounts/labs/gsi/testdata/strelka/test_inputs/PCSI_Test02.bam.bai",
                     "externalIds": [
                         {
                             "id": "TEST",
@@ -39,7 +39,7 @@
             },
             "strelka.normalBam": {
                 "contents": {
-                    "configuration": "/.mounts/labs/gsi/testdata/strelka/input_data/PCSI_0773_Ly_R_PE_366_EX.bam",
+                    "configuration": "/.mounts/labs/gsi/testdata/strelka/test_inputs/PCSI_Test02.bam",
                     "externalIds": [
                         {
                             "id": "TEST",
@@ -49,7 +49,7 @@
                 },
                 "type": "EXTERNAL"
             },
-            "strelka.outputFileNamePrefix": "PCSI_0773_Ly_R_PE_366_EX",
+            "strelka.outputFileNamePrefix": "PCSI_Test",
             "strelka.runStrelka.memory": null,
             "strelka.runStrelka.modules": null,
             "strelka.runStrelka.refFasta": null,
@@ -65,7 +65,7 @@
             "strelka.sortBams.timeout": null,
             "strelka.tumorBai": {
                 "contents": {
-                    "configuration": "/.mounts/labs/gsi/testdata/strelka/input_data/PCSI_0773_Pa_P_PE_315_EX.bam.bai",
+                    "configuration": "/.mounts/labs/gsi/testdata/strelka/test_inputs/PCSI_Test01.bam.bai",
                     "externalIds": [
                         {
                             "id": "TEST",
@@ -77,7 +77,7 @@
             },
             "strelka.tumorBam": {
                 "contents": {
-                    "configuration": "/.mounts/labs/gsi/testdata/strelka/input_data/PCSI_0773_Pa_P_PE_315_EX.bam",
+                    "configuration": "/.mounts/labs/gsi/testdata/strelka/test_inputs/PCSI_Test01.bam",
                     "externalIds": [
                         {
                             "id": "TEST",
@@ -100,12 +100,12 @@
            "read_from_cache": false,
            "write_to_cache": false
         },
-        "id": "PCSI_0773_EX",
+        "id": "PCSI_Test_EX",
         "metadata": {
             "strelka.indel": {
                 "contents": [
                     {
-                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_strelka_PCSI_0773_EX_@JENKINSID@"
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_strelka_PCSI_Test_EX_@JENKINSID@"
                     }
                 ],
                 "type": "ALL"
@@ -113,7 +113,7 @@
             "strelka.indelIndex": {
                 "contents": [
                     {
-                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_strelka_PCSI_0773_EX_@JENKINSID@"
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_strelka_PCSI_Test_EX_@JENKINSID@"
                     }
                 ],
                 "type": "ALL"
@@ -121,7 +121,7 @@
             "strelka.snv": {
                 "contents": [
                     {
-                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_strelka_PCSI_0773_EX_@JENKINSID@"
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_strelka_PCSI_Test_EX_@JENKINSID@"
                     }
                 ],
                 "type": "ALL"
@@ -129,7 +129,7 @@
             "strelka.snvIndex": {
                 "contents": [
                     {
-                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_strelka_PCSI_0773_EX_@JENKINSID@"
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_strelka_PCSI_Test_EX_@JENKINSID@"
                     }
                 ],
                 "type": "ALL"
@@ -139,7 +139,7 @@
             {
                 "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
                 "metrics_compare": "@CHECKOUT@/tests/compare.sh",
-                "output_metrics": "/.mounts/labs/gsi/testdata/strelka/output_metrics/1.0/PCSI_0773_EX.metrics",
+                "output_metrics": "/.mounts/labs/gsi/testdata/strelka/output_metrics/workflow_test_01.metrics",
                 "type": "script"
             }
         ]
@@ -172,7 +172,7 @@
             "strelka.maxInputDepth": 0,
             "strelka.normalBai": {
                 "contents": {
-                    "configuration": "/.mounts/labs/gsi/testdata/strelka/input_data/SWID_2483326_DCIS_0001_Br_R_PE_255_TS_1_150728_D00355_0090_BC6BREANXX_TGACCA_L001_001.annotated.bam.bai",
+                    "configuration": "/.mounts/labs/gsi/testdata/strelka/test_inputs/DCIS_Test02.annotated.bam.bai",
                     "externalIds": [
                         {
                             "id": "TEST",
@@ -184,7 +184,7 @@
             },
             "strelka.normalBam": {
                 "contents": {
-                    "configuration": "/.mounts/labs/gsi/testdata/strelka/input_data/SWID_2483326_DCIS_0001_Br_R_PE_255_TS_1_150728_D00355_0090_BC6BREANXX_TGACCA_L001_001.annotated.bam",
+                    "configuration": "/.mounts/labs/gsi/testdata/strelka/test_inputs/DCIS_Test02.annotated.bam",
                     "externalIds": [
                         {
                             "id": "TEST",
@@ -194,7 +194,7 @@
                 },
                 "type": "EXTERNAL"
             },
-            "strelka.outputFileNamePrefix": "DCIS_0001_Br_R_PE_255_TS",
+            "strelka.outputFileNamePrefix": "DCIS_Test",
             "strelka.runStrelka.memory": null,
             "strelka.runStrelka.modules": null,
             "strelka.runStrelka.refFasta": null,
@@ -210,7 +210,7 @@
             "strelka.sortBams.timeout": null,
             "strelka.tumorBai": {
                 "contents": {
-                    "configuration": "/.mounts/labs/gsi/testdata/strelka/input_data/SWID_2483308_DCIS_0001_Br_P_PE_255_TS_1_150728_D00355_0090_BC6BREANXX_CGATGT_L001_001.annotated.bam.bai",
+                    "configuration": "/.mounts/labs/gsi/testdata/strelka/test_inputs/DCIS_Test01.annotated.bam.bai",
                     "externalIds": [
                         {
                             "id": "TEST",
@@ -222,7 +222,7 @@
             },
             "strelka.tumorBam": {
                 "contents": {
-                    "configuration": "/.mounts/labs/gsi/testdata/strelka/input_data/SWID_2483308_DCIS_0001_Br_P_PE_255_TS_1_150728_D00355_0090_BC6BREANXX_CGATGT_L001_001.annotated.bam",
+                    "configuration": "/.mounts/labs/gsi/testdata/strelka/test_inputs/DCIS_Test01.annotated.bam",
                     "externalIds": [
                         {
                             "id": "TEST",
@@ -245,12 +245,12 @@
            "read_from_cache": false,
            "write_to_cache": false
         },
-        "id": "DCIS_0001_TS",
+        "id": "DCIS_Test_TS",
         "metadata": {
             "strelka.indel": {
                 "contents": [
                     {
-                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_strelka_DCIS_0001_TS_@JENKINSID@"
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_strelka_DCIS_Test_TS_@JENKINSID@"
                     }
                 ],
                 "type": "ALL"
@@ -258,7 +258,7 @@
             "strelka.indelIndex": {
                 "contents": [
                     {
-                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_strelka_DCIS_0001_TS_@JENKINSID@"
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_strelka_DCIS_Test_TS_@JENKINSID@"
                     }
                 ],
                 "type": "ALL"
@@ -266,7 +266,7 @@
             "strelka.snv": {
                 "contents": [
                     {
-                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_strelka_DCIS_0001_TS_@JENKINSID@"
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_strelka_DCIS_Test_TS_@JENKINSID@"
                     }
                 ],
                 "type": "ALL"
@@ -274,7 +274,7 @@
             "strelka.snvIndex": {
                 "contents": [
                     {
-                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_strelka_DCIS_0001_TS_@JENKINSID@"
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_strelka_DCIS_Test_TS_@JENKINSID@"
                     }
                 ],
                 "type": "ALL"
@@ -284,7 +284,7 @@
             {
                 "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
                 "metrics_compare": "@CHECKOUT@/tests/compare.sh",
-                "output_metrics": "/.mounts/labs/gsi/testdata/strelka/output_metrics/1.0/DCIS_0001_TS.metrics",
+                "output_metrics": "/.mounts/labs/gsi/testdata/strelka/output_metrics/workflow_test_02.metrics",
                 "type": "script"
             }
         ]
